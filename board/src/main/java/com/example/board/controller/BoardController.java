@@ -17,6 +17,12 @@ public class BoardController {
     @Autowired
     BoardService boardService;
 
+    @GetMapping("/board")
+    public String board() {
+        return "/board/index";
+    }
+
+    
     @GetMapping("/board/openBoardList.do")
     public ModelAndView openBoardList() throws Exception {
         ModelAndView mv = new ModelAndView("/board/boardList");
